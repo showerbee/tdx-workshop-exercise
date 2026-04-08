@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh auth:*)",
+      "Bash(git clone:*)",
+      "Bash(mv temp-clone/* temp-clone/.* .)",
+      "Bash(rm -rf temp-clone)",
+      "Bash(rm -rf .git)",
+      "Bash(git init:*)"
+    ]
+  }
+}
