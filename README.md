@@ -1,4 +1,6 @@
-# Salesforce Design System 2 Starter Kit
+# TDX Design System Workshop
+
+> This workshop is based on a starter kit that will be coming soon.
 
 A **starter template** for prototyping and developing Salesforce experiences locally. Built with **LWC** (Lightning Web Components), **Vite**, **SLDS** (Salesforce Lightning Design System), and **lightning-base-components**, so you get fast builds, hot reload, and a setup that aligns with the Salesforce platform (synthetic shadow, base components, design tokens).
 
