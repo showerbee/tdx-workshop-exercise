@@ -1,0 +1,53 @@
+<template>
+    <!-- NON-COMPLIANT COMPONENT: User Profile Card -->
+    <!-- This component intentionally violates SLDS best practices for workshop exercise -->
+
+    <div class="profile-card">
+        <div class="card-header">
+            <div class="avatar-container">
+                <!-- Violation: Using inline styles -->
+                <div class="avatar" style="background-color: #0070d2;">
+                    <span class="avatar-initials">AJ</span>
+                </div>
+                <!-- Violation: Inline style for status indicator -->
+                <span class="status-dot" style="background: #4bca81;"></span>
+            </div>
+        </div>
+
+        <div class="card-body">
+            <!-- Violation: Using deprecated double-dash class naming (SLDS 1 style) -->
+            <h3 class="slds-text-heading--medium user-name">{userName}</h3>
+
+            <!-- Violation: More deprecated class naming -->
+            <p class="slds-text-body--small user-role">{userRole}</p>
+
+            <div class="contact-info">
+                <!-- Violation: Inline onclick style, hardcoded color -->
+                <a href="mailto:{userEmail}" class="email-link" style="color: #0070d2;">
+                    {userEmail}
+                </a>
+            </div>
+
+            <div class="stats-row">
+                <div class="stat-item">
+                    <span class="stat-value">127</span>
+                    <span class="stat-label">Projects</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">84%</span>
+                    <span class="stat-label">Success</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">4.9</span>
+                    <span class="stat-label">Rating</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-footer">
+            <!-- Violation: Custom button without SLDS styling -->
+            <button class="custom-btn primary-btn">View Profile</button>
+            <button class="custom-btn secondary-btn">Message</button>
+        </div>
+    </div>
+</template>

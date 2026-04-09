@@ -1,0 +1,205 @@
+/* NON-COMPLIANT CSS: Alert/Notification System */
+/* This file intentionally violates SLDS best practices for workshop exercise */
+
+/* Violation: Hard-coded spacing instead of design tokens */
+.alerts-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Violation: Base alert styles with hard-coded values */
+.error,
+.warning,
+.success {
+    display: flex;
+    align-items: flex-start;
+    padding: 16px;
+    border-radius: 6px;
+    border-left-width: 4px;
+    border-left-style: solid;
+}
+
+/* Violation: Hard-coded error colors instead of semantic tokens */
+.error {
+    background-color: #fef1f1;
+    border-left-color: #c23934;
+}
+
+/* Violation: Hard-coded warning colors */
+.warning {
+    background-color: #fff8e6;
+    border-left-color: #ff9a3c;
+}
+
+/* Violation: Hard-coded success colors */
+.success {
+    background-color: #e6f7e9;
+    border-left-color: #2e844a;
+}
+
+/* Violation: Hard-coded sizing */
+.alert-icon-wrapper {
+    flex-shrink: 0;
+    margin-right: 12px;
+}
+
+.alert-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Violation: Hard-coded flex value */
+.alert-content {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Violation: Hard-coded font properties and colors */
+.alert-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #080707;
+    margin-bottom: 4px;
+    line-height: 1.25;
+}
+
+/* Violation: Hard-coded font properties and colors */
+.alert-message {
+    font-size: 13px;
+    color: #444444;
+    line-height: 1.5;
+}
+
+/* Violation: Custom close button styles instead of lightning-button-icon */
+.close-btn {
+    background: none;
+    border: none;
+    padding: 4px;
+    margin-left: 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    line-height: 1;
+    transition: background-color 0.15s ease;
+}
+
+.close-btn:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.close-icon {
+    font-size: 16px;
+    color: #706e6b;
+    font-weight: bold;
+}
+
+/* Violation: Hard-coded inline form styles */
+.inline-form {
+    margin-top: 24px;
+    padding: 20px;
+    background: #f4f6f9;
+    border-radius: 8px;
+}
+
+.form-field {
+    margin-bottom: 16px;
+}
+
+.form-field:last-child {
+    margin-bottom: 0;
+}
+
+.field-label {
+    display: block;
+    font-size: 12px;
+    color: #444444;
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+
+/* Violation: Custom toggle/switch instead of using lightning-input type="toggle" */
+.custom-toggle {
+    display: flex;
+    align-items: center;
+}
+
+.toggle-input {
+    display: none;
+}
+
+/* Violation: Hard-coded toggle track styles */
+.toggle-label {
+    position: relative;
+    width: 44px;
+    height: 24px;
+    background-color: #b0adab;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/* Violation: Hard-coded toggle knob styles */
+.toggle-label::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+
+/* Violation: Hard-coded active state colors */
+.toggle-input:checked + .toggle-label {
+    background-color: #0070d2;
+}
+
+.toggle-input:checked + .toggle-label::after {
+    transform: translateX(20px);
+}
+
+/* Violation: Hard-coded focus state */
+.toggle-input:focus + .toggle-label {
+    box-shadow: 0 0 0 3px rgba(0, 112, 210, 0.4);
+}
+
+.toggle-text {
+    margin-left: 8px;
+    font-size: 14px;
+    color: #080707;
+}
+
+/* Violation: Custom select styling instead of lightning-combobox */
+.custom-select {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #dddbda;
+    border-radius: 4px;
+    font-size: 14px;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23706e6b' d='M3.5 4.5l2.5 3 2.5-3h-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 36px;
+}
+
+/* Violation: Hard-coded focus and hover states */
+.custom-select:focus {
+    outline: none;
+    border-color: #0070d2;
+    box-shadow: 0 0 0 3px rgba(0, 112, 210, 0.2);
+}
+
+.custom-select:hover {
+    border-color: #706e6b;
+}
+
+/* Violation: Hard-coded disabled state colors */
+.custom-select:disabled {
+    background-color: #e5e5e5;
+    color: #969492;
+    cursor: not-allowed;
+}

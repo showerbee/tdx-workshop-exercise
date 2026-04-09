@@ -1,86 +1,54 @@
 <template>
-    <section class="slds-p-horizontal_small slds-p-vertical_medium">
-        <header class="slds-m-bottom_large">
-            <h1 class="slds-text-heading_large slds-m-bottom_x-small">
-                Welcome to the Salesforce UI Starter Kit
+    <section class="hero-container">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+            <div class="grid-overlay"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="badge-container">
+                <span class="workshop-badge">TDX Workshop</span>
+            </div>
+
+            <h1 class="hero-title">
+                <span class="title-line title-line-1">Design Systems</span>
+                <span class="title-line title-line-2">Day Zero</span>
             </h1>
-            <p class="slds-text-body_regular intro-copy">
-                Use this to prototype and build off-platform experiences with SLDS and Lightning Base Components.
-            </p>
-        </header>
 
-        <h2 class="slds-text-heading_medium slds-m-bottom_medium">Where to Find Components</h2>
+            <p class="hero-subtitle">Hands on exercise</p>
 
-        <div role="list">
-            <lightning-layout
-                vertical-align="start"
-                class="slds-m-bottom_medium"
-                role="listitem">
-                <lightning-layout-item flexibility="no-grow" class="intro-step-number-column slds-m-right_small">
-                    <span class="intro-step-number" aria-hidden="true">1</span>
-                </lightning-layout-item>
-                <lightning-layout-item flexibility="auto">
-                    <h3 class="slds-text-heading_small slds-m-bottom_xx-small">
-                        Start with <a class="intro-title-link" href="https://developer.salesforce.com/docs/platform/lightning-component-reference" target="_blank" rel="noopener noreferrer">Lightning Base Components
-                            <lightning-icon
-                                icon-name="utility:new_window"
-                                size="xx-small"
-                                alternative-text="Opens in a new tab"
-                                class="intro-link-icon slds-m-left_xx-small">
-                            </lightning-icon>
-                        </a>
-                    </h3>
-                    <p class="slds-text-body_regular intro-copy">
-                        <strong>Always</strong> start with Lightning Base Components first. When talking with an agent, name these components directly (for example,
-                        <code>lightning-button</code>).
-                    </p>
-                </lightning-layout-item>
-            </lightning-layout>
+            <div class="hero-description">
+                <p>Build beautiful, accessible experiences with Lightning Web Components and the Salesforce Lightning Design System.</p>
+            </div>
 
-            <lightning-layout
-                vertical-align="start"
-                class="slds-m-bottom_medium"
-                role="listitem">
-                <lightning-layout-item flexibility="no-grow" class="intro-step-number-column slds-m-right_small">
-                    <span class="intro-step-number" aria-hidden="true">2</span>
-                </lightning-layout-item>
-                <lightning-layout-item flexibility="auto">
-                    <h3 class="slds-text-heading_small slds-m-bottom_xx-small">
-                        Use <a class="intro-title-link" href="https://v1.lightningdesignsystem.com/components/activity-timeline/" target="_blank" rel="noopener noreferrer">Component Blueprints
+            <div class="cta-container">
+                <button class="cta-button primary" onclick={handleGetStarted}>
+                    <span class="button-text">Explore Components</span>
+                    <span class="button-icon">
                         <lightning-icon
-                            icon-name="utility:new_window"
-                            size="xx-small"
-                            alternative-text="Opens in a new tab"
-                            class="intro-link-icon slds-m-left_xx-small">
-                        </lightning-icon></a>
-                        when needed
-                    </h3>
-                    <p class="slds-text-body_regular intro-copy">
-                        If you cannot find what you need from Lightning Base Components, create a new LWC from a Component Blueprint, replacing as much markup with Lightning Base Components as possible.
-                    </p>
-                </lightning-layout-item>
-            </lightning-layout>
+                            icon-name="utility:arrowdown"
+                            size="x-small"
+                            alternative-text="Scroll down">
+                        </lightning-icon>
+                    </span>
+                </button>
+            </div>
 
-            <lightning-layout vertical-align="start" role="listitem">
-                <lightning-layout-item flexibility="no-grow" class="intro-step-number-column slds-m-right_small">
-                    <span class="intro-step-number" aria-hidden="true">3</span>
-                </lightning-layout-item>
-                <lightning-layout-item flexibility="auto">
-                    <h3 class="slds-text-heading_small slds-m-bottom_xx-small">
-                        Build custom with <a class="intro-title-link" href="https://www.lightningdesignsystem.com/2e1ef8501/p/591960-global-styling-hooks/b/40abde" target="_blank" rel="noopener noreferrer">Global Styling Hooks
-                            <lightning-icon
-                                icon-name="utility:new_window"
-                                size="xx-small"
-                                alternative-text="Opens in a new tab"
-                                class="intro-link-icon slds-m-left_xx-small">
-                            </lightning-icon>
-                        </a>
-                    </h3>
-                    <p class="slds-text-body_regular intro-copy">
-                        If you cannot find what you need as a Lightning Base Component or Component Blueprint, create a custom component using Global Styling Hooks.
-                    </p>
-                </lightning-layout-item>
-            </lightning-layout>
+            <div class="tech-stack">
+                <span class="tech-item">LWC</span>
+                <span class="tech-divider"></span>
+                <span class="tech-item">SLDS</span>
+                <span class="tech-divider"></span>
+                <span class="tech-item">Vite</span>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
         </div>
     </section>
 </template>

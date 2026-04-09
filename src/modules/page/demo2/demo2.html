@@ -1,0 +1,51 @@
+<template>
+    <lightning-layout
+        multiple-rows="true"
+        class="slds-container_x-large slds-container_center slds-m-top_large">
+        <lightning-layout-item size="12" class="slds-m-bottom_large">
+            <ui-demo2-intro></ui-demo2-intro>
+        </lightning-layout-item>
+
+        <lightning-layout-item size="12" class="slds-m-bottom_large">
+            <lightning-card title="Non-SLDS Compliant Components" icon-name="utility:warning">
+                <div class="slds-p-horizontal_medium slds-p-vertical_medium">
+                    <p class="slds-text-body_regular slds-m-bottom_large">
+                        The components below need to be updated to comply with SLDS 2 standards.
+                        Your task is to identify and fix the styling issues using design tokens,
+                        Lightning Base Components, and proper accessibility patterns.
+                    </p>
+
+                    <lightning-layout multiple-rows="true">
+                        <!-- Non-Compliant Card Component -->
+                        <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-small" class="slds-m-bottom_medium">
+                            <div class="component-demo">
+                                <h3 class="slds-text-heading_small slds-m-bottom_small">
+                                    <lightning-icon icon-name="utility:error" size="x-small" class="slds-m-right_x-small"></lightning-icon>
+                                    User Profile Card
+                                </h3>
+                                <p class="slds-text-body_small slds-text-color_weak slds-m-bottom_medium">
+                                    Issues: Hard-coded colors, custom buttons, inline styles, deprecated SLDS 1 classes
+                                </p>
+                                <ui-non-compliant-card></ui-non-compliant-card>
+                            </div>
+                        </lightning-layout-item>
+
+                        <!-- Non-Compliant Alert Component -->
+                        <lightning-layout-item size="12" medium-device-size="6" padding="horizontal-small" class="slds-m-bottom_medium">
+                            <div class="component-demo">
+                                <h3 class="slds-text-heading_small slds-m-bottom_small">
+                                    <lightning-icon icon-name="utility:error" size="x-small" class="slds-m-right_x-small"></lightning-icon>
+                                    Alert System
+                                </h3>
+                                <p class="slds-text-body_small slds-text-color_weak slds-m-bottom_medium">
+                                    Issues: Custom form elements, inline SVGs, missing ARIA, hard-coded tokens
+                                </p>
+                                <ui-non-compliant-alert></ui-non-compliant-alert>
+                            </div>
+                        </lightning-layout-item>
+                    </lightning-layout>
+                </div>
+            </lightning-card>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>

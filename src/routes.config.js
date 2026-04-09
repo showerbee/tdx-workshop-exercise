@@ -21,6 +21,20 @@ export const routes = [
     navLabel: 'Home',
   },
   {
+    path: '/demo1',
+    component: 'page-demo1',
+    title: 'Demo 1 - Figma to LWC',
+    navPage: 'demo1',
+    navLabel: 'Demo 1',
+  },
+  {
+    path: '/demo2',
+    component: 'page-demo2',
+    title: 'Demo 2 - SLDS Transition',
+    navPage: 'demo2',
+    navLabel: 'Demo 2',
+  },
+  {
     path: '/icons',
     component: 'page-icon-test',
     title: 'Icons',

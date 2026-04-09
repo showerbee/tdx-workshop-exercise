@@ -1,0 +1,24 @@
+/* page/demo2 styles */
+
+.non-compliant-placeholder {
+    padding: 2rem;
+    border: 2px dashed var(--slds-g-color-border-base-1, #c9c9c9);
+    border-radius: 0.5rem;
+    background: var(--slds-g-color-neutral-base-95, #f3f3f3);
+}
+
+.component-demo {
+    padding: var(--slds-g-spacing-4, 1rem);
+    background: var(--slds-g-color-neutral-base-95, #f3f3f3);
+    border-radius: var(--slds-g-radius-2, 0.5rem);
+    border: 1px solid var(--slds-g-color-border-base-1, #e5e5e5);
+}
+
+.component-demo h3 {
+    display: flex;
+    align-items: center;
+}
+
+.component-demo h3 lightning-icon {
+    --slds-c-icon-color-foreground-default: var(--slds-g-color-error-base-40, #ea001e);
+}

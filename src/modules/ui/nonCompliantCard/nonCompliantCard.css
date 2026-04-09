@@ -1,0 +1,164 @@
+/* NON-COMPLIANT CSS: User Profile Card */
+/* This file intentionally violates SLDS best practices for workshop exercise */
+
+/* Violation: Hard-coded colors instead of design tokens */
+.profile-card {
+    background-color: #ffffff;
+    border: 1px solid #dddbda;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 320px;
+    overflow: hidden;
+    font-family: 'Salesforce Sans', Arial, sans-serif;
+}
+
+/* Violation: Hard-coded spacing values in px instead of tokens */
+.card-header {
+    background: linear-gradient(135deg, #0070d2, #1589ee);
+    padding: 24px;
+    text-align: center;
+}
+
+.avatar-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Violation: Hard-coded sizes, colors, and shadows */
+.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Violation: Hard-coded font properties */
+.avatar-initials {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Violation: Hard-coded positioning and colors */
+.status-dot {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+}
+
+/* Violation: Hard-coded padding and colors */
+.card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Violation: Hard-coded font size and color */
+.user-name {
+    color: #080707;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 4px 0;
+}
+
+/* Violation: Hard-coded font size and color */
+.user-role {
+    color: #706e6b;
+    font-size: 14px;
+    margin: 0 0 16px 0;
+}
+
+/* Violation: Hard-coded margin */
+.contact-info {
+    margin-bottom: 20px;
+}
+
+/* Violation: Hard-coded colors and hover states */
+.email-link {
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.email-link:hover {
+    text-decoration: underline;
+    color: #005fb2;
+}
+
+/* Violation: Hard-coded border, padding, and layout values */
+.stats-row {
+    display: flex;
+    justify-content: space-around;
+    padding: 16px 0;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+/* Violation: Hard-coded font properties */
+.stat-value {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    color: #0070d2;
+}
+
+.stat-label {
+    display: block;
+    font-size: 11px;
+    color: #969492;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 2px;
+}
+
+/* Violation: Hard-coded padding and gap */
+.card-footer {
+    display: flex;
+    gap: 12px;
+    padding: 16px 20px;
+    background-color: #fafaf9;
+}
+
+/* Violation: Custom button styles instead of using lightning-button */
+.custom-btn {
+    flex: 1;
+    padding: 10px 16px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+}
+
+/* Violation: Hard-coded button colors */
+.primary-btn {
+    background-color: #0070d2;
+    color: #ffffff;
+}
+
+.primary-btn:hover {
+    background-color: #005fb2;
+}
+
+/* Violation: Hard-coded secondary button styles */
+.secondary-btn {
+    background-color: #ffffff;
+    color: #0070d2;
+    border: 1px solid #0070d2;
+}
+
+.secondary-btn:hover {
+    background-color: #f4f6f9;
+}

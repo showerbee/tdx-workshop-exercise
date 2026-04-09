@@ -1,0 +1,43 @@
+<template>
+    <div class="pipeline-container">
+        <div class="pipeline-track">
+            <template for:each={stagesWithState} for:item="stage">
+                <div key={stage.id} class="pipeline-item">
+                    <div class={stage.stageClass}>
+                        <div class="stage-icon-wrapper">
+                            <div class="stage-icon">
+                                <lightning-icon
+                                    icon-name={stage.iconName}
+                                    size="small"
+                                    alternative-text={stage.label}>
+                                </lightning-icon>
+                            </div>
+                            <template lwc:if={stage.isActive}>
+                                <div class="stage-pulse"></div>
+                                <div class="stage-pulse pulse-2"></div>
+                            </template>
+                        </div>
+                        <div class="stage-label">{stage.label}</div>
+                        <div class="stage-description">{stage.description}</div>
+                    </div>
+
+                    <template lwc:if={stage.hasConnector}>
+                        <div class={stage.connectorClass}>
+                            <div class="connector-line"></div>
+                            <div class="connector-flow"></div>
+                            <template lwc:if={stage.isActive}>
+                                <div class="connector-particle"></div>
+                            </template>
+                        </div>
+                    </template>
+                </div>
+            </template>
+        </div>
+
+        <div class="particles-overlay">
+            <div class="particle particle-1"></div>
+            <div class="particle particle-2"></div>
+            <div class="particle particle-3"></div>
+        </div>
+    </div>
+</template>

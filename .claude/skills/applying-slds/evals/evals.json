@@ -1,0 +1,61 @@
+{
+  "skill_name": "applying-slds",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Build an SLDS-compliant modal dialog containing a 3-field form (Name, Email, Phone) with Save and Cancel buttons. Use SLDS blueprint classes for the modal structure and form layout. The modal should have a header with a close button, the form body, and a footer with the action buttons. Output both the HTML and CSS needed. Use styling hooks for any custom CSS values.",
+      "expected_output": "HTML with SLDS modal blueprint classes and CSS with --slds-g-* hooks",
+      "files": [],
+      "assertions": [
+        "HTML contains slds-modal__header, slds-modal__content, and slds-modal__footer class names",
+        "Form fields use slds-form-element class structure (slds-form-element, slds-form-element__label, slds-form-element__control)",
+        "All var(--slds-g-*) declarations include a CSS fallback value as the second argument"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Create 3 status indicator cards — one for Success, one for Warning, and one for Error. Each card needs a colored background, an appropriate icon, a status title, and a short description message. Use SLDS styling hooks for ALL color values (backgrounds, text, borders). Show me the complete CSS with the hook declarations and the HTML structure.",
+      "expected_output": "CSS using --slds-g-color-* hooks with proper surface/on-surface pairing and numbered variants",
+      "files": [],
+      "assertions": [
+        "Every --slds-g-color-* hook reference ends in a number (1, 2, or 3) — no unnumbered forms like --slds-g-color-surface or --slds-g-color-on-surface",
+        "Surface/background colors are paired with corresponding on-surface/on-* color hooks for text readability",
+        "No hardcoded hex (#rrggbb), rgb(), or hsl() color values appear outside of var() fallback positions"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Build a responsive dashboard layout with 3 equal-width columns that stack to single-column on mobile. Each column contains a card with a title, a stat number, and a small description. Use ONLY SLDS utility classes for the grid, spacing, and text alignment — no custom CSS at all. Output HTML only.",
+      "expected_output": "HTML using slds-grid, slds-col, slds-size_*, slds-p-*, slds-m-* utility classes",
+      "files": [],
+      "assertions": [
+        "Uses SLDS responsive breakpoint utility classes (slds-medium-size_* or slds-large-size_*) for the column-to-stack transition",
+        "Uses slds-size_1-of-1 on columns for mobile single-column fallback layout",
+        "Contains zero style tags and zero inline style attributes — pure utility class approach"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Build a vertical navigation sidebar for a CRM app with these 5 menu items: Dashboard, Accounts, Contacts, Reports, Settings. Each menu item needs an appropriate SLDS icon with proper accessibility text. Build this as an LWC HTML template using lightning-icon components and the SLDS vertical-navigation blueprint.",
+      "expected_output": "LWC template with lightning-icon components, correct icon names from SLDS categories, and alternative-text attributes",
+      "files": [],
+      "assertions": [
+        "All lightning-icon elements have an alternative-text attribute with descriptive text",
+        "All icon-name values use valid category:name format from the SLDS icon set (e.g., standard:account, utility:settings)",
+        "Navigation structure uses slds-nav-vertical blueprint classes"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Write the CSS for a custom analytics widget component. The widget has: a header section with a large title, a metric display area with a prominent number, and a footer with small helper text. Requirements: use --slds-g-font-scale-* hooks for ALL font sizes (not --slds-g-font-size-N), pair surface and on-surface color hooks correctly, use shadow hooks for card elevation, use spacing hooks for all padding/margins, and prefix all custom classes with 'my-'. Output CSS only.",
+      "expected_output": "CSS with my-* prefixed classes, --slds-g-font-scale-* (not font-size-N), numbered color hooks with surface/on-surface pairing",
+      "files": [],
+      "assertions": [
+        "Uses --slds-g-font-scale-* hooks for font sizes — does NOT contain any --slds-g-font-size-N patterns (only --slds-g-font-size-base is allowed)",
+        "All custom CSS class selectors start with my- prefix (no bare names, no slds- overrides)",
+        "All --slds-g-color-* hook references end in a number (no unnumbered color hooks)",
+        "Uses --slds-g-shadow-* hooks for box-shadow or elevation values"
+      ]
+    }
+  ]
+}

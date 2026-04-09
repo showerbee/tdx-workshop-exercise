@@ -3,6 +3,8 @@ import { subscribe, navigate } from '../../../router';
 import { routes } from '../../../routes.config';
 import { toggleSLDS, activeSLDSVersion } from '../../../build/slds-loader';
 import Home from 'page/home';
+import Demo1 from 'page/demo1';
+import Demo2 from 'page/demo2';
 import IconTest from 'page/iconTest';
 import Settings from 'page/settings';
 import User from 'page/user';
@@ -12,6 +14,8 @@ import ContactDetail from 'page/contactDetail';
 /** Option A: explicit registration – add one import + one entry here when adding a route */
 const ROUTE_COMPONENTS = {
     'page-home': Home,
+    'page-demo1': Demo1,
+    'page-demo2': Demo2,
     'page-icon-test': IconTest,
     'page-settings': Settings,
     'page-user': User,

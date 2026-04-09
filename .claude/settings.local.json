@@ -6,7 +6,14 @@
       "Bash(mv temp-clone/* temp-clone/.* .)",
       "Bash(rm -rf temp-clone)",
       "Bash(rm -rf .git)",
-      "Bash(git init:*)"
+      "Bash(git init:*)",
+      "Bash(git remote:*)",
+      "Bash(curl -s http://localhost:5173)",
+      "Bash(curl -s http://localhost:3000)",
+      "Bash(pkill -f \"vite\")",
+      "Bash(curl -s http://localhost:3000/demo2)",
+      "Bash(cp -r src/modules/ui/nonCompliantCard src/modules/ui/_backup/)",
+      "Bash(cp -r src/modules/ui/nonCompliantAlert src/modules/ui/_backup/)"
     ]
   }
 }
