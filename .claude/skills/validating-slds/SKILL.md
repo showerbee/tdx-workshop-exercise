@@ -1,18 +1,7 @@
 ---
 name: validating-slds
 version: "1.0.0"
-description: >-
-  Audit Lightning Web Components for SLDS compliance and produce a scored quality
-  report. Runs the SLDS linter, analyzes CSS for theming hook usage and pairing,
-  checks HTML for accessibility attributes, and scores findings across categories
-  into an overall grade. Use when asked to "score my component", "SLDS scorecard",
-  "quality report", "audit SLDS compliance", "how good is my SLDS", "check
-  component quality", "rate my component", "evaluate my component", "is this
-  component ready to ship?", "look at my LWC for issues", "audit this before I
-  submit", "review my component before code review", or any time a user wants a
-  quality assessment or production-readiness check on an LWC or SLDS component.
-  Not for fixing violations (use uplifting-components-to-slds2) or building new components (use
-  applying-slds).
+description: "Audit Lightning Web Components for SLDS compliance and produce a scored quality report. Runs the SLDS linter, analyzes CSS for theming hook usage and pairing, checks HTML for accessibility attributes, and scores findings across categories into an overall grade. Use when asked to \"score my component\", \"SLDS scorecard\", \"quality report\", \"audit SLDS compliance\", \"how good is my SLDS\", \"check component quality\", \"rate my component\", \"evaluate my component\", \"is this component ready to ship?\", \"look at my LWC for issues\", \"audit this before I submit\", \"review my component before code review\", or any time a user wants a quality assessment or production-readiness check on an LWC or SLDS component. Not for fixing violations (use uplifting-components-to-slds2) or building new components (use applying-slds)."
 ---
 
 # SLDS Quality Audit
@@ -82,7 +71,7 @@ The script outputs JSON with findings organized by severity. It checks:
 | Check | What It Catches | Severity |
 |-------|----------------|----------|
 | Missing fallbacks | `var(--slds-g-*)` without a fallback value | Critical |
-| Invented hooks (T051) | `--slds-g-*` tokens not found in `hooks-index.json` | Critical |
+| Invented hooks (T051) | `--slds-g-*` tokens not found in `hooks-index.json` (requires `--hooks-index`) | Critical |
 | Hook pairing | Background hooks without matching foreground hooks | Warning |
 | `!important` | Specificity overrides | Warning |
 | Magic pixel values | Hardcoded `px` not using spacing hooks | Warning |
@@ -268,5 +257,5 @@ If a check produces a false positive, note it in the report as "suppressed" with
 - **[Quality Checks](references/quality-checks.md)** - Complete list of all quality checks with detection patterns
 - **[Report Format](references/report-format.md)** - Quality report template and formatting guide
 - **[Analyze Script](scripts/analyze-quality.cjs)** - Automated analysis for linter-complementary checks
-- **[SLDS Uplift Skill](../uplifting-components-to-slds2/SKILL.md)** - How to fix linter violations
-- **[SLDS Applying Skill](../applying-slds/SKILL.md)** - Guide for building new components with correct patterns
+- **uplifting-components-to-slds2 skill** - How to fix linter violations
+- **applying-slds skill** - Guide for building new components with correct patterns

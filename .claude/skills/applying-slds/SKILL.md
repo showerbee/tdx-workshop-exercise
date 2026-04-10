@@ -1,7 +1,7 @@
 ---
 name: applying-slds
 version: "1.0.0"
-description: Apply SLDS-compliant UI using the correct blueprints, styling hooks, utility classes, and icons. Use when building any UI that needs SLDS, choosing between Lightning Base Components and SLDS Blueprints, applying styling hooks for theming, using utility classes for layout and spacing, or selecting icons. Triggers include "build a modal", "create a form", "data table", "SLDS styling", "style with hooks", "add an icon".
+description: "Apply SLDS-compliant UI using the correct blueprints, styling hooks, utility classes, and icons. Use when building any UI that needs SLDS, choosing between Lightning Base Components and SLDS Blueprints, applying styling hooks for theming, using utility classes for layout and spacing, or selecting icons. Triggers include \"build a modal\", \"create a form\", \"data table\", \"SLDS styling\", \"style with hooks\", \"add an icon\"."
 ---
 
 # Applying SLDS
@@ -309,7 +309,7 @@ See [examples.md](examples.md) for worked examples demonstrating the full workfl
 
 ## Validation
 
-See [checklists.md](checklists.md) for validation checklists aligned with the [validating-slds](../validating-slds/) skill.
+See [checklists.md](checklists.md) for validation checklists aligned with the validating-slds skill.
 
 ## Resources
 

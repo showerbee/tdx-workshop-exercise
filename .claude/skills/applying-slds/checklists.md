@@ -1,10 +1,7 @@
 # Validation Checklists
 
-Run through these checks before finalizing any SLDS-authored component. Check IDs align with the [validating-slds](../validating-slds/) skill's quality-checks.md.
+Run through these checks before finalizing any SLDS-authored component. Check IDs align with the validating-slds skill's quality-checks.md.
 
-> **Command paths:** Commands below assume the current working directory is `packages/skills/applying-slds`. If running from the repo root, prefix script paths with `packages/skills/applying-slds/`.
-
----
 
 ## Theming & Styling (T-series)
 

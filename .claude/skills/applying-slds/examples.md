@@ -4,9 +4,6 @@ Worked examples showing the SLDS authoring workflow: from intent to artifact sel
 
 Each example follows the 5-phase workflow from SKILL.md and shows which files were consulted and why.
 
-> **Command paths:** Commands below assume the current working directory is `packages/skills/applying-slds`. If running from the repo root, prefix script paths with `packages/skills/applying-slds/`.
-
----
 
 ## Example 1: Build a Confirmation Dialog
 

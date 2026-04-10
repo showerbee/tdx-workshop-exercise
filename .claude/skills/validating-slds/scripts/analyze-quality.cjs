@@ -13,17 +13,15 @@
 const fs = require('fs');
 const path = require('path');
 
-const DEFAULT_HOOKS_INDEX = path.resolve(__dirname, '../../applying-slds/metadata/hooks-index.json');
-
 function resolveHooksIndexPath(args) {
   const idx = args.indexOf('--hooks-index');
   if (idx !== -1 && idx + 1 < args.length) {
     return path.resolve(args[idx + 1]);
   }
-  return DEFAULT_HOOKS_INDEX;
+  return null;
 }
 
-let HOOKS_INDEX_PATH = DEFAULT_HOOKS_INDEX;
+let HOOKS_INDEX_PATH = null;
 
 // Severity levels
 const CRITICAL = 'critical';
@@ -271,13 +269,13 @@ function analyzeHeadings(filePath) {
 let _validHooks = null;
 function loadValidHooks() {
   if (_validHooks) return _validHooks;
+  if (!HOOKS_INDEX_PATH) return null;
   try {
     const data = JSON.parse(fs.readFileSync(HOOKS_INDEX_PATH, 'utf-8'));
     _validHooks = new Set(data.hooks.map(h => h.token));
   } catch {
     console.error(`WARNING: Could not load hooks-index.json at ${HOOKS_INDEX_PATH}`);
     console.error('Invented-hook detection (T051) will be skipped.');
-    console.error('Provide the correct path with --hooks-index <path> or ensure applying-slds is a sibling directory.');
     _validHooks = null;
   }
   return _validHooks;
@@ -509,7 +507,7 @@ if (require.main === module) {
     console.log('Usage: node analyze-quality.cjs <component-path> [--hooks-index <path>]');
     console.log('');
     console.log('Options:');
-    console.log('  --hooks-index <path>  Path to hooks-index.json (default: ../applying-slds/metadata/hooks-index.json)');
+    console.log('  --hooks-index <path>  Path to hooks-index.json (optional; enables T051 invented-hook detection)');
     console.log('');
     console.log('Output: JSON analysis of SLDS quality issues');
     process.exit(0);
