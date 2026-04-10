@@ -1,10 +1,11 @@
 /* NON-COMPLIANT CSS: User Profile Card */
 /* This file intentionally violates SLDS best practices for workshop exercise */
 
-/* Violation: Hard-coded colors instead of design tokens */
+/* Partially fixed: background and border now use SLDS hooks (dark-mode aware),
+   but text colors throughout are still hard-coded — creates invisible text in dark mode */
 .profile-card {
-    background-color: #ffffff;
-    border: 1px solid #dddbda;
+    background-color: var(--slds-g-color-surface-1, #ffffff);
+    border: 1px solid var(--slds-g-color-border-1, #dddbda);
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     max-width: 320px;
@@ -92,13 +93,14 @@
     color: #005fb2;
 }
 
-/* Violation: Hard-coded border, padding, and layout values */
+/* Partially fixed: borders use SLDS hook (dark-mode aware),
+   but stat-value color below is still hard-coded */
 .stats-row {
     display: flex;
     justify-content: space-around;
     padding: 16px 0;
-    border-top: 1px solid #e5e5e5;
-    border-bottom: 1px solid #e5e5e5;
+    border-top: 1px solid var(--slds-g-color-border-1, #e5e5e5);
+    border-bottom: 1px solid var(--slds-g-color-border-1, #e5e5e5);
 }
 
 .stat-item {
@@ -122,12 +124,13 @@
     margin-top: 2px;
 }
 
-/* Violation: Hard-coded padding and gap */
+/* Partially fixed: footer background uses SLDS hook (dark-mode aware),
+   but button colors below are still hard-coded */
 .card-footer {
     display: flex;
     gap: 12px;
     padding: 16px 20px;
-    background-color: #fafaf9;
+    background-color: var(--slds-g-color-surface-2, #fafaf9);
 }
 
 /* Violation: Custom button styles instead of using lightning-button */

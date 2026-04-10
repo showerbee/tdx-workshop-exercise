@@ -1,11 +1,12 @@
 /* NON-COMPLIANT CSS: Alert/Notification System */
 /* This file intentionally violates SLDS best practices for workshop exercise */
 
-/* Violation: Hard-coded spacing instead of design tokens */
+/* Partially fixed: gap uses SLDS spacing hook (dark-mode aware structural token),
+   but all alert background colors below are still hard-coded */
 .alerts-container {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: var(--slds-g-spacing-3, 12px);
 }
 
 /* Violation: Base alert styles with hard-coded values */
@@ -93,11 +94,12 @@
     font-weight: bold;
 }
 
-/* Violation: Hard-coded inline form styles */
+/* Partially fixed: background uses SLDS hook (dark-mode aware),
+   but all text/label colors inside are still hard-coded — invisible in dark mode */
 .inline-form {
     margin-top: 24px;
     padding: 20px;
-    background: #f4f6f9;
+    background: var(--slds-g-color-surface-2, #f4f6f9);
     border-radius: 8px;
 }
 
@@ -172,11 +174,12 @@
     color: #080707;
 }
 
-/* Violation: Custom select styling instead of lightning-combobox */
+/* Partially fixed: border uses SLDS hook (dark-mode aware),
+   but background color and font size below are still hard-coded */
 .custom-select {
     width: 100%;
     padding: 8px 12px;
-    border: 1px solid #dddbda;
+    border: 1px solid var(--slds-g-color-border-1, #dddbda);
     border-radius: 4px;
     font-size: 14px;
     appearance: none;
