@@ -1,0 +1,122 @@
+<template>
+    <section class="explainer-section">
+        <div class="explainer-inner">
+
+            <!-- Header -->
+            <div class="explainer-header">
+                <div class="header-eyebrow">SLDS 2 Uplift Explained</div>
+                <h2 class="header-title">Why These Patterns Break</h2>
+                <p class="header-subtitle">Common CSS patterns that look fine in light mode silently break theming, dark mode, and brand customization. Hover the highlighted lines below to inspect each violation.</p>
+            </div>
+
+            <!-- Body: Code Panel + Inspector -->
+            <div class="explainer-body">
+
+                <!-- Code Panel -->
+                <div class="code-panel">
+                    <div class="code-titlebar">
+                        <span class="mac-dot mac-red"></span>
+                        <span class="mac-dot mac-yellow"></span>
+                        <span class="mac-dot mac-green"></span>
+                        <span class="code-filename">feature-card.css</span>
+                        <span class="linter-badge">
+                            <span class="linter-icon">&#9888;</span>
+                            3 violations
+                        </span>
+                    </div>
+
+                    <div class="code-block">
+                        <div class="line comment">/* SLDS 2 Violations — detected by linter */</div>
+                        <div class="line blank"></div>
+                        <div class="line selector">.feature-card &#123;</div>
+                        <div class="line violation indented vline-1"><span class="prop">background-color</span>: <span class="val-bad">#ffffff</span>;<span class="vbadge">1</span></div>
+                        <div class="line indented"><span class="prop">padding</span>: <span class="val-ok">24px</span>;</div>
+                        <div class="line indented"><span class="prop">border-radius</span>: <span class="val-ok">12px</span>;</div>
+                        <div class="line selector">&#125;</div>
+                        <div class="line blank"></div>
+                        <div class="line selector">.card-label &#123;</div>
+                        <div class="line indented"><span class="prop">color</span>: <span class="val-ok">var(--slds-g-color-on-surface-2)</span>;</div>
+                        <div class="line violation indented vline-2"><span class="prop">font-weight</span>: var(<span class="val-bad">--lwc-fontWeightRegular</span>);<span class="vbadge">2</span></div>
+                        <div class="line selector">&#125;</div>
+                        <div class="line blank"></div>
+                        <div class="line violation vline-3"><span class="val-bad">.slds-button_neutral</span> &#123;<span class="vbadge">3</span></div>
+                        <div class="line indented"><span class="prop">background-color</span>: <span class="val-bad">#ffffff</span>;</div>
+                        <div class="line selector">&#125;</div>
+                    </div>
+                </div>
+
+                <!-- Inspector Panel -->
+                <div class="inspector-panel">
+
+                    <!-- Default / empty state -->
+                    <div class="inspector-placeholder">
+                        <div class="placeholder-cursor">
+                            <span class="cursor-dot"></span>
+                            <span class="cursor-line"></span>
+                        </div>
+                        <p class="placeholder-text">Hover a<br><strong>highlighted line</strong><br>to inspect</p>
+                    </div>
+
+                    <!-- Violation 1: Hardcoded background -->
+                    <div class="ann-detail ann-1">
+                        <div class="ann-top">
+                            <span class="ann-num">1</span>
+                            <span class="ann-rule">no-hardcoded-values</span>
+                        </div>
+                        <h3 class="ann-headline">Hardcoded color breaks dark mode</h3>
+                        <p class="ann-body"><strong>#ffffff</strong> is frozen at compile time. It cannot respond to dark mode, brand theming, or high-contrast accessibility requirements — the user sees a blinding white surface regardless of their preference.</p>
+                        <div class="code-compare">
+                            <div class="compare-block compare-bad">
+                                <div class="compare-label">Before</div>
+                                <code class="compare-code">background-color: #ffffff;</code>
+                            </div>
+                            <div class="compare-block compare-good">
+                                <div class="compare-label">After</div>
+                                <code class="compare-code">background-color: var(--slds-g-color-surface-1, #ffffff);</code>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Violation 2: Deprecated SLDS 1 token -->
+                    <div class="ann-detail ann-2">
+                        <div class="ann-top">
+                            <span class="ann-num">2</span>
+                            <span class="ann-rule">no-deprecated-tokens-slds1</span>
+                        </div>
+                        <h3 class="ann-headline">SLDS 1 token removed in SLDS 2</h3>
+                        <p class="ann-body"><strong>--lwc-*</strong> tokens were the SLDS 1 API. They are entirely removed in SLDS 2 — there is no fallback. Using them produces no error, but the property silently resolves to the browser default, causing visual regressions.</p>
+                        <div class="code-compare">
+                            <div class="compare-block compare-bad">
+                                <div class="compare-label">Before</div>
+                                <code class="compare-code">font-weight: var(--lwc-fontWeightRegular);</code>
+                            </div>
+                            <div class="compare-block compare-good">
+                                <div class="compare-label">After</div>
+                                <code class="compare-code">font-weight: var(--slds-g-font-weight-4, var(--lwc-fontWeightRegular));</code>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Violation 3: SLDS class override -->
+                    <div class="ann-detail ann-3">
+                        <div class="ann-top">
+                            <span class="ann-num">3</span>
+                            <span class="ann-rule">no-slds-class-overrides</span>
+                        </div>
+                        <h3 class="ann-headline">Overriding .slds-* classes is unsupported</h3>
+                        <p class="ann-body">Targeting internal <strong>.slds-*</strong> class names directly breaks the component contract. Salesforce treats these as private implementation details — any platform release can change them, silently breaking your override.</p>
+                        <p class="ann-body">The fix depends on the component being overridden. Check the component's published styling hook API for the right <code>--slds-c-*</code> custom property to use instead.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Footer callout -->
+            <div class="explainer-footer">
+                <div class="footer-icon">&#9997;</div>
+                <p class="footer-text">The SLDS 2 linter catches every one of these automatically. <strong>Uplift replaces them with semantic styling hooks</strong> that adapt to any theme — light, dark, or custom brand.</p>
+            </div>
+
+        </div>
+    </section>
+</template>

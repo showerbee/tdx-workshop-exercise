@@ -1,0 +1,50 @@
+{
+  "mocks": {
+    "form": {
+      "keyword": "form",
+      "figmaUrl": "https://www.figma.com/design/MwxtPJqqivOWK2RN32qkcb/TDX-2026-Design-System-Workshop?node-id=3-12771&m=dev",
+      "fileKey": "MwxtPJqqivOWK2RN32qkcb",
+      "nodeId": "3:12771",
+      "description": "Contact form with input fields (Name, Email, Phone) and a Country combobox, shown in both read-only and editable states",
+      "responsePath": "mock-figma-data/form/response.json",
+      "screenshotPath": "mock-figma-data/form/screenshot.png",
+      "assetsDir": "mock-figma-data/form/assets"
+    },
+    "screen-2": {
+      "keyword": "screen-2",
+      "figmaUrl": "https://www.figma.com/design/MwxtPJqqivOWK2RN32qkcb/TDX-2026-Design-System-Workshop?node-id=4002-17680&m=dev",
+      "fileKey": "MwxtPJqqivOWK2RN32qkcb",
+      "nodeId": "4002:17680",
+      "description": "Email-to-Case feature detail page — header with breadcrumb, hero with video thumbnail, setup step sections (toggle, checkboxes), resource links, and Purchase Options",
+      "responsePath": "mock-figma-data/screen-2/response.json",
+      "screenshotPath": "mock-figma-data/screen-2/screenshot.png",
+      "assetsDir": "mock-figma-data/screen-2/assets"
+    },
+    "screen-3": {
+      "keyword": "screen-3",
+      "figmaUrl": "https://www.figma.com/design/MwxtPJqqivOWK2RN32qkcb/TDX-2026-Design-System-Workshop?node-id=4002-17903&m=dev",
+      "fileKey": "MwxtPJqqivOWK2RN32qkcb",
+      "nodeId": "4002:17903",
+      "description": "Agentforce setup page with Turn On Agentforce section, Agent Template section containing Sales Coaching and SDR Agent toggles with progress badges, resource links, and help videos",
+      "responsePath": "mock-figma-data/screen-3/response.json",
+      "screenshotPath": "mock-figma-data/screen-3/screenshot.png",
+      "assetsDir": "mock-figma-data/screen-3/assets"
+    },
+    "wizard": {
+      "keyword": "wizard",
+      "figmaUrl": "https://www.figma.com/design/nhGxG4b3J6BTwGY4V6sQvJ/TDX-2026?node-id=2-100&m=dev",
+      "fileKey": "nhGxG4b3J6BTwGY4V6sQvJ",
+      "nodeId": "2:100",
+      "description": "Wizard/stepper UI with 4-step progress, left photo panel, checkbox skill selection, and navigation buttons",
+      "responsePath": "mock-figma-data/wizard/response.json",
+      "screenshotPath": "mock-figma-data/wizard/screenshot.png",
+      "assetsDir": "mock-figma-data/wizard/assets"
+    }
+  },
+  "urlToKeyword": {
+    "https://www.figma.com/design/MwxtPJqqivOWK2RN32qkcb/TDX-2026-Design-System-Workshop?node-id=3-12771&m=dev": "form",
+    "https://www.figma.com/design/MwxtPJqqivOWK2RN32qkcb/TDX-2026-Design-System-Workshop?node-id=4002-17680&m=dev": "screen-2",
+    "https://www.figma.com/design/MwxtPJqqivOWK2RN32qkcb/TDX-2026-Design-System-Workshop?node-id=4002-17903&m=dev": "screen-3",
+    "https://www.figma.com/design/nhGxG4b3J6BTwGY4V6sQvJ/TDX-2026?node-id=2-100&m=dev": "wizard"
+  }
+}

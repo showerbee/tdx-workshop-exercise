@@ -1,0 +1,28 @@
+---
+description: Use when user says "mock figma", "mock-figma-implement-design", provides a Figma URL without Figma MCP access, or uses a keyword like "form" in the context of implementing a design. Also use when user says "record mock", "record-mock-figma", or "capture figma mock".
+globs:
+  - "mock-figma-data/**"
+alwaysApply: false
+---
+
+# Mock Figma System
+
+This project has a mock Figma system for workshop participants without Figma access.
+
+## Two Skills
+
+1. **`mock-figma-implement-design`** — Implement a component from pre-recorded mock data (no Figma MCP needed). Read the skill at `.claude/skills/mock-figma-implement-design/SKILL.md`.
+2. **`record-mock-figma`** — Record new mock data from a live Figma file. Read the skill at `.claude/skills/record-mock-figma/SKILL.md`.
+
+## Quick Reference
+
+- Mock data lives in `mock-figma-data/`
+- Registry at `mock-figma-data/registry.json` maps keywords and URLs to mock entries
+- Each mock has a `response.json` (design context), `screenshot.png`, and `assets/` folder
+- Available keywords: check `registry.json` → `mocks` keys
+
+## When to Use
+
+- User says "mock figma" or "mock-figma-implement-design" → use `mock-figma-implement-design` skill
+- User says "record mock" or "record-mock-figma" → use `record-mock-figma` skill
+- User provides a Figma URL and Figma MCP is not available → check if URL exists in `registry.json` → `urlToKeyword`, then use mock
