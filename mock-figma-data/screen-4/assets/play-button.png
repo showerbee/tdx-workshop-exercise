@@ -1,0 +1,18 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Play BTN" filter="url(#filter0_d_0_43818)">
+<rect x="20" y="16" width="48" height="48" rx="24" fill="var(--fill-0, white)" shape-rendering="crispEdges"/>
+<path id="Polygon 1" d="M37.295 29.8133C37.295 29.1792 37.9814 28.7829 38.5306 29.1L56.1744 39.2866C56.7236 39.6037 56.7236 40.3963 56.1744 40.7134L38.5306 50.9C37.9814 51.2171 37.295 50.8208 37.295 50.1867L37.295 29.8133Z" fill="var(--fill-0, #032D60)"/>
+</g>
+<defs>
+<filter id="filter0_d_0_43818" x="0" y="0" width="88" height="88" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="10"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_43818"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_43818" result="shape"/>
+</filter>
+</defs>
+</svg>
